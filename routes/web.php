@@ -5,7 +5,7 @@ use App\Http\Controllers\FormularioController;
 use App\Http\Controllers\ArquivoController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('app.welcome');
 });
 
 Route::get(

@@ -7,6 +7,6 @@ class FormularioController extends Controller
 {
     public function renderizarFormulario()
     {
-        return view('arquivo.formulario');
+        return view('app.arquivo.formulario');
     }
 }
