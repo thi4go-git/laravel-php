@@ -15,15 +15,12 @@
     <div class="wrapper">
         <!-- Header -->
         <nav class="main-header navbar navbar-expand navbar-green navbar-light">
-            <a class="navbar-brand text-white" href="#">
+            <a class="navbar-brand text-white" href="{{ route('arquivo.formulario') }}">
                 <strong>Arquivos WEB</strong>
             </a>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Outro Link</a>
+                    <a class="nav-link text-white" href="{{ route('site.informacao') }}">Informações</a>
                 </li>
             </ul>
         </nav>
@@ -31,7 +28,7 @@
         <!-- Corpo da Página -->
         <div class="content-wrapper">
             <div class="content">
-                <div class="container">                  
+                <div class="container">
                     <!-- Aqui será renderizado o conteúdo da página -->
                     @yield('conteudo-body')
                 </div>
@@ -39,7 +36,9 @@
         </div>
 
         <footer class="main-footer bg-muted text-white text-center">
-            <img src="{{ asset('img/logo-rodape.png') }}" alt="Imagem rodape">
+            <a class="navbar-brand text-white" href="https://www.goinfra.go.gov.br/" target="_blank">
+                <img src="{{ asset('img/logo-rodape.png') }}" alt="Imagem rodape">
+            </a>
         </footer>
     </div>
 

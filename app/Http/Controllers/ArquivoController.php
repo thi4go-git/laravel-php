@@ -31,7 +31,5 @@ class ArquivoController extends Controller
                 print("<br>");
             }
         }
-        return '';
-        // return response()->json(['message' => 'Formulario processado com sucesso!']);
     }
 }

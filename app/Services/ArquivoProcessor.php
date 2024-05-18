@@ -37,15 +37,13 @@ class ArquivoProcessor
 
     private function processarXLSX(UploadedFile $arquivo)
     {
-        // Exemplo básico de leitura de um arquivo XLSX usando PhpSpreadsheet
-        //$spreadsheet = IOFactory::load($arquivo->getPathname());
-        // $sheet = $spreadsheet->getActiveSheet();
-        //$data = $sheet->toArray();
-        return 'Não implementado leitura de XSLX';
+        print_r($arquivo);
+        return '';
     }
 
     private function processarXLS(UploadedFile $arquivo)
     {
-        return 'Não implementado leitura de XSL';
+        print_r($arquivo);
+        return '';
     }
 }

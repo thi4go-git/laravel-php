@@ -11,7 +11,7 @@
             <div class="form-group">
                 <label class="control-label" for="form_control_sgUf">Enviar Arquivos</label>
                 <div class="input-group">
-                    <input type="file" class="form-control input-arquivos" name="arquivos[]" accept=".pdf, .xls" multiple>
+                    <input type="file" class="form-control input-arquivos" name="arquivos[]" accept=".pdf, .xls, .xlsx" multiple>
                 </div>
             </div>
         </div>
