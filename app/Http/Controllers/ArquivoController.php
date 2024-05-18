@@ -3,36 +3,26 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Services\ArquivoProcessor;
+use App\Services\ArquivoService;
 
 
 class ArquivoController extends Controller
 {
 
-    protected $arquivoProcessor;
+    protected $arquivoService;
 
-    public function __construct(ArquivoProcessor $arquivoProcessor)
+    public function __construct(ArquivoService $arquivoService)
     {
-        $this->arquivoProcessor = $arquivoProcessor;
+        $this->arquivoService = $arquivoService;
     }
 
     public function processarArquivos(Request $request)
     {
         $this->validarArquivos($request);
-
         $requestData = $request->all();
         //$token = $requestData['_token'];
         $arquivos = $requestData['arquivos'];
-        foreach ($arquivos as $arquivo) {
-            try {
-                $resultado = $this->arquivoProcessor->processarArquivo($arquivo);
-                print_r($resultado);
-                print("<br>");
-            } catch (\Exception $e) {
-                print_r('Erro de processamento: ' . $e->getMessage());
-                print("<br>");
-            }
-        }
+        $this->arquivoService->processarArquivos($arquivos);  
     }
 
     private function validarArquivos(Request $request)
