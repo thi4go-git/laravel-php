@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Services;
-
 use Illuminate\Http\UploadedFile;
 
 
@@ -37,13 +36,13 @@ class ArquivoProcessor
 
     private function processarXLSX(UploadedFile $arquivo)
     {
-        print_r($arquivo);
+        echo('processarXLSX');
         return 'processar XSLX';
     }
 
     private function processarXLS(UploadedFile $arquivo)
     {
-        print_r($arquivo);
+        echo('processarXLS');
         return '';
     }
 }
