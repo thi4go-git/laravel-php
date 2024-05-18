@@ -1,6 +1,7 @@
 @extends('layouts.layout01')
 
 @section('conteudo-body')
+<h1 class="mt-5">Processar Arquivos</h1>
 <img src="{{ asset('img/clear.png') }}" alt="">
 <form action="{{ route('arquivos.processar') }}" method="POST" enctype="multipart/form-data">
     @csrf
@@ -15,6 +16,8 @@
             </div>
         </div>
     </div>
-    <input type="submit" class="form-control input-arquivos" name="arquivos[]">
+
+    <button type="submit" class="btn btn-success form-control input-arquivos" name="arquivos[]">Enviar</button>
+
 </form>
 @endsection

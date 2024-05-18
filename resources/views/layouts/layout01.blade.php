@@ -31,8 +31,7 @@
         <!-- Corpo da Página -->
         <div class="content-wrapper">
             <div class="content">
-                <div class="container">
-                    <h1 class="mt-5">Processar Arquivos</h1>
+                <div class="container">                  
                     <!-- Aqui será renderizado o conteúdo da página -->
                     @yield('conteudo-body')
                 </div>
