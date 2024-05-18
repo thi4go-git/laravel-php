@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <img src="{{ asset('img/clear.png') }}" alt="">
     <form action="{{ route('arquivos.processar') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <input type="hidden" name="type" value="11">
