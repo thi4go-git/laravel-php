@@ -1,5 +1,4 @@
 ## Iniciar PROJETO LARAVEL:
-
 01 -> Instalar o PHP e configurar variáveis de ambiente.
 
 02 -> Instalar o COMPOSER: https://getcomposer.org/download/
@@ -24,10 +23,8 @@ O sistema rodará na porta 8009 nesse exemplo acima;
 
 
 ## Comandos Composer / Artisan úteis
-
 Comando artisan para criar controller:  php artisan make:controller TesteController
 
 
 ## Dependência usada para ler XSLX:
-Comando composer: composer require maatwebsite/excel
-Configurar dependência: php artisan vendor:publish --provider="Maatwebsite\Excel\ExcelServiceProvider"
+composer require phpoffice/phpspreadsheet
