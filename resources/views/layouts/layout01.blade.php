@@ -29,6 +29,14 @@
         <div class="content-wrapper">
             <div class="content">
                 <div class="container">
+
+                    @if($errors->any())
+                    @foreach($errors->all() as $error)
+                    <!-- Mensagens personalizadas do sistema -->
+                    <p style="color: red;">{{ $error }}</p>
+                    @endforeach
+                    @endif
+
                     <!-- Aqui será renderizado o conteúdo da página -->
                     @yield('conteudo-body')
                 </div>
