@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use Illuminate\Http\UploadedFile;
+use Maatwebsite\Excel\Facades\Excel;
 
 
 class ArquivoProcessor
@@ -37,7 +38,16 @@ class ArquivoProcessor
 
     private function processarXLSX(UploadedFile $arquivo)
     {
-        print_r($arquivo);
+        $filePath = $arquivo->getPathname();
+
+        $dados = Excel::toCollection(function ($reader) use ($filePath) {
+            $reader->load($filePath);
+        })->first(); // Obter a primeira coleção (primeira aba)
+
+        $linha10 = $dados[9]; // Índice 9 corresponde à linha 10 (índice baseado em zero)
+        $colunas = $linha10->slice(0, 3); // Obter as primeiras três colunas
+
+        print_r($colunas);
         return '';
     }
 
