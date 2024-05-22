@@ -62,10 +62,15 @@ class ArquivoService
 
             foreach ($cellIterator as $cell) {
                 $valor = $cell->getValue();
-                $linha[] = $valor;
+                if (!empty($valor)) {
+                    $linha[] = $valor;
+                }
             }
 
-            $dados[] = $linha;
+            // Verificar se $linha não está vazio antes de adicionar a $dados
+            if (!empty($linha)) {
+                $dados[] = $linha;
+            }
         }
 
         return $dados;
